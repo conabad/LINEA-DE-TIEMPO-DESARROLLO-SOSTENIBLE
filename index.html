@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evolución Histórica: Desarrollo Sostenible y Responsabilidad Social</title>
+    <title>Actividad 1: Línea de Tiempo - Desarrollo Sostenible</title>
     <style>
         :root {
             --primary-color: #1a365d;
@@ -14,7 +14,7 @@
         }
 
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Arial', sans-serif; /* Ajustado a fuente académica estándar */
             background-color: var(--bg-color);
             color: var(--text-color);
             margin: 0;
@@ -22,30 +22,52 @@
             line-height: 1.6;
         }
 
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 60px 20px;
+        /* ESTILOS DE LA PORTADA ACADÉMICA */
+        .portada-academica {
+            background-color: var(--card-bg);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 80px 40px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+            border-bottom: 5px solid var(--primary-color);
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
+        .portada-academica .encabezado-institucional {
+            font-weight: bold;
+            font-size: 1.1em;
+            line-height: 1.4;
             text-transform: uppercase;
-            letter-spacing: 2px;
         }
 
-        header p {
-            font-size: 1.2em;
-            margin-top: 15px;
-            opacity: 0.9;
+        .portada-academica .titulo-central {
+            font-size: 1.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: auto 0;
+            line-height: 1.5;
         }
 
+        .portada-academica .bloque-autores {
+            align-self: flex-end;
+            text-align: left;
+            margin-right: 10%;
+            margin-bottom: 60px;
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+
+        .portada-academica .fecha-lugar {
+            font-size: 1.1em;
+        }
+
+        /* ESTILOS DE LA LÍNEA DE TIEMPO */
         .timeline-wrapper {
             max-width: 1200px;
-            margin: 50px auto;
+            margin: 80px auto 50px auto;
             padding: 0 20px;
         }
 
@@ -53,7 +75,6 @@
             position: relative;
         }
 
-        /* La línea central */
         .timeline::after {
             content: '';
             position: absolute;
@@ -76,7 +97,6 @@
         .left { left: 0; }
         .right { left: 50%; }
 
-        /* Los nodos en la línea */
         .container::after {
             content: '';
             position: absolute;
@@ -134,6 +154,24 @@
 
         .link-btn:hover { background-color: var(--secondary-color); }
 
+        /* ESTILOS DE REFLEXIÓN Y REFERENCIAS */
+        .reflection-container {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 40px;
+            background-color: var(--card-bg);
+            border-left: 5px solid var(--secondary-color);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-radius: 8px;
+        }
+
+        .reflection-text {
+            font-size: 1.3em;
+            font-style: italic;
+            color: var(--text-color);
+            text-align: center;
+        }
+
         .references-section {
             max-width: 1000px;
             margin: 80px auto;
@@ -150,7 +188,6 @@
             text-transform: uppercase;
         }
 
-        /* Sangría Francesa estricta formato UPEL */
         .upel-ref {
             padding-left: 2em;
             text-indent: -2em;
@@ -158,8 +195,8 @@
             font-size: 0.95em;
         }
 
-        /* Responsive para móviles y tabletas */
         @media screen and (max-width: 768px) {
+            .portada-academica .bloque-autores { align-self: center; margin-right: 0; margin-bottom: 40px; }
             .timeline::after { left: 31px; }
             .container { width: 100%; padding-left: 70px; padding-right: 25px; }
             .right { left: 0; }
@@ -169,228 +206,236 @@
 </head>
 <body>
 
-    <header>
-        <h1>Línea de Tiempo</h1>
-        <p>Desarrollo Sostenible, Responsabilidad Social y Conservación (1891 - 2025)</p>
-        <p style="font-size: 0.9em; margin-top: 5px;">Investigación Doctoral - Universidad Pedagógica Experimental Libertador (UPEL)</p>
-    </header>
+    <!-- PORTADA ACADÉMICA -->
+    <div class="portada-academica">
+        <div class="encabezado-institucional">
+            REPÚBLICA BOLIVARIANA DE VENEZUELA<br>
+            UNIVERSIDAD PEDAGÓGICA EXPERIMENTAL LIBERTADOR<br>
+            INSTITUTO DE MEJORAMIENTO PROFESIONAL DEL MAGISTERIO<br>
+            COMPETENCIAS INVESTIGATIVAS
+        </div>
 
+        <div class="titulo-central">
+            ACTIVIDAD 1: LÍNEA DE TIEMPO<br>
+            INVESTIGACIÓN Y DESARROLLO SOSTENIBLE
+        </div>
+
+        <div class="bloque-autores">
+            <p><strong>AUTOR:</strong> ACEVEDO MERCADO, ANA<br>
+            ARRIETA VILLALBA, EFRAÍN<br>
+            CONTRERAS ABAD, ADRIAN<br>
+            CONTRERAS ABAD, DIANA</p>
+            <br>
+            <p><strong>TUTOR:</strong> GONZÁLEZ, HUMBERTO</p>
+        </div>
+
+        <div class="fecha-lugar">
+            Maracaibo, octubre de 2026.
+        </div>
+    </div>
+
+    <!-- LÍNEA DE TIEMPO -->
     <div class="timeline-wrapper">
         <div class="timeline">
 
-            <!-- EVENTO 1 -->
             <div class="container left">
                 <div class="content">
                     <div class="year">1891</div>
                     <div class="title">Encíclica Rerum Novarum</div>
                     <p>Fundó la doctrina social contemporánea. Al denunciar las condiciones miserables de la Revolución Industrial, sentó las bases innegociables de la dignidad laboral y la Responsabilidad Social.</p>
-                    <a href="https://www.youtube.com/results?search_query=Encíclica+Rerum+Novarum+del+Papa+León+XIII" target="_blank" class="link-btn">Ver Documental</a>
+                    <a href="https://www.youtube.com/results?search_query=Enc%C3%ADclica+Rerum+Novarum+del+Papa+Le%C3%B3n+XIII" target="_blank" class="link-btn">Ver Video</a>
                 </div>
             </div>
 
-            <!-- EVENTO 2 -->
             <div class="container right">
                 <div class="content">
                     <div class="year">1948</div>
                     <div class="title">Aprobación de la Declaración Universal de los Derechos Humanos</div>
                     <p>Documento fundacional que estableció la protección universal de la dignidad, la igualdad y los derechos inalienables; pilares sociales absolutos sobre los que se sostiene el concepto moderno de Responsabilidad Social y el Desarrollo Sostenible.</p>
-                    <a href="https://www.youtube.com/results?search_query=Derechos+Humanos+La+Declaracion+de+la+ONU+1948" target="_blank" class="link-btn">Ver Documental</a>
+                    <a href="https://www.youtube.com/results?search_query=Derechos+Humanos+La+Declaracion+de+la+ONU+1948" target="_blank" class="link-btn">Ver Video</a>
                 </div>
             </div>
 
-            <!-- EVENTO 3 -->
             <div class="container left">
                 <div class="content">
                     <div class="year">1948</div>
                     <div class="title">Fundación de la UICN</div>
                     <p>Creación de la Unión Internacional para la Conservación de la Naturaleza. Fue la primera gran organización mundial dedicada a la investigación científica y conservación de ecosistemas.</p>
-                    <a href="https://www.youtube.com/results?search_query=¿Qué+es+la+UICN?" target="_blank" class="link-btn">Ver Documental</a>
+                    <a href="https://www.youtube.com/results?search_query=%C2%BFQu%C3%A9+es+la+UICN%3F" target="_blank" class="link-btn">Ver Video</a>
                 </div>
             </div>
 
-            <!-- EVENTO 4 -->
             <div class="container right">
                 <div class="content">
                     <div class="year">1962</div>
                     <div class="title">Publicación de Primavera Silenciosa</div>
                     <p>El libro de Rachel Carson que despertó la conciencia ecológica moderna. Denunció los efectos letales de los pesticidas (DDT), obligando a cambiar leyes ambientales a nivel mundial.</p>
-                    <a href="https://www.youtube.com/results?search_query=PRIMAVERA+SILENCIOSA+El+libro+que+despertó+la+conciencia+ecológica" target="_blank" class="link-btn">Ver Documental</a>
+                    <a href="https://www.youtube.com/results?search_query=PRIMAVERA+SILENCIOSA+El+libro+que+despert%C3%B3+la+conciencia+ecol%C3%B3gica+en+el+mundo" target="_blank" class="link-btn">Ver Video</a>
                 </div>
             </div>
 
-            <!-- EVENTO 5 -->
             <div class="container left">
                 <div class="content">
                     <div class="year">1971</div>
                     <div class="title">Convención de Ramsar</div>
                     <p>Primer tratado intergubernamental moderno. Enfocado en la conservación y el uso racional de los humedales, ecosistemas críticos para el equilibrio hídrico del planeta.</p>
-                    <a href="https://www.youtube.com/results?search_query=Convención+de+Ramsar+explicación" target="_blank" class="link-btn">Ver Documental</a>
+                    <a href="https://www.youtube.com/results?search_query=Convenci%C3%B3n+de+Ramsar+explicaci%C3%B3n" target="_blank" class="link-btn">Ver Video</a>
                 </div>
             </div>
 
-            <!-- EVENTO 6 -->
             <div class="container right">
                 <div class="content">
                     <div class="year">1972</div>
                     <div class="title">Conferencia de Estocolmo</div>
-                    <p>Primera cumbre oficial de la ONU sobre el Medio Humano. Institucionalizó la educación ambiental a nivel global y creó el Programa de las Naciones Unidas para el Medio Ambiente (PNUMA).</p>
-                    <a href="https://www.youtube.com/results?search_query=Conferencia+de+ESTOCOLMO" target="_blank" class="link-btn">Ver Documental</a>
+                    <p>Primera cumbre oficial de la ONU sobre el Medio Humano. Institucionalizada la educación ambiental a nivel global y creó el Programa de las Naciones Unidas para el Medio Ambiente (PNUMA).</p>
+                    <a href="https://www.youtube.com/results?search_query=Conferencia+de+ESTOCOLMO+DETALLES+poco+conocidos+de+la+CONFERENCIA+QUE+CAMBIO+AL+MUNDO" target="_blank" class="link-btn">Ver Video</a>
                 </div>
             </div>
 
-            <!-- EVENTO 7 -->
             <div class="container left">
                 <div class="content">
                     <div class="year">1987</div>
                     <div class="title">Informe Brundtland</div>
                     <p>Acuñó definitivamente el término "Desarrollo Sostenible". Demostró científicamente que el progreso económico no podía seguir desvinculado del agotamiento de los recursos ecológicos.</p>
-                    <a href="https://www.youtube.com/results?search_query=El+Informe+Brundtland" target="_blank" class="link-btn">Ver Documental</a>
+                    <a href="https://www.youtube.com/results?search_query=El+Informe+Brundtland+Hito+en+la+Sostenibilidad" target="_blank" class="link-btn">Ver Video</a>
                 </div>
             </div>
 
-            <!-- EVENTO 8 -->
             <div class="container right">
                 <div class="content">
                     <div class="year">1987</div>
                     <div class="title">Firma del Protocolo de Montreal</div>
                     <p>Considerado el tratado ambiental más exitoso de la historia. Estableció la eliminación global vinculante de las sustancias químicas que agotan la capa de ozono, demostrando que la cooperación internacional para frenar un desastre ecológico es posible.</p>
-                    <a href="https://www.youtube.com/results?search_query=Protocolo+Montreal+agujero+capa+de+ozono" target="_blank" class="link-btn">Ver Documental</a>
+                    <a href="https://www.youtube.com/results?search_query=Protocolo+Montreal+El+acuerdo+y+sus+resultados+en+el+agujero+de+la+capa+de+ozono" target="_blank" class="link-btn">Ver Video</a>
                 </div>
             </div>
 
-            <!-- EVENTO 9 -->
             <div class="container left">
                 <div class="content">
                     <div class="year">1989</div>
                     <div class="title">Convenio de Basilea</div>
                     <p>Freno legal global al "colonialismo tóxico". Reguló y restringió drásticamente el movimiento transfronterizo de desechos peligrosos desde países industrializados hacia países en vías de desarrollo.</p>
-                    <a href="https://www.youtube.com/results?search_query=Convenio+Basilea" target="_blank" class="link-btn">Ver Documental</a>
+                    <a href="https://www.youtube.com/results?search_query=Basilea+Las+Reglas+Invisibles+que+Dirigen+el+Sistema+Financiero" target="_blank" class="link-btn">Ver Video</a>
                 </div>
             </div>
 
-            <!-- EVENTO 10 -->
             <div class="container right">
                 <div class="content">
                     <div class="year">1992</div>
                     <div class="title">Cumbre de la Tierra (Río 1992)</div>
                     <p>Estableció la "Agenda 21". Fue el punto de inflexión diplomático que dio origen a las Convenciones de Cambio Climático, Biodiversidad y Desertificación de la ONU.</p>
-                    <a href="https://www.youtube.com/results?search_query=La+declaración+de+Río+de+Janeiro" target="_blank" class="link-btn">Ver Documental</a>
+                    <a href="https://www.youtube.com/results?search_query=La+declaraci%C3%B3n+de+R%C3%ADo+de+Janeiro+27+principios+de+sustentabilidad" target="_blank" class="link-btn">Ver Video</a>
                 </div>
             </div>
 
-            <!-- EVENTO 11 -->
             <div class="container left">
                 <div class="content">
                     <div class="year">1997</div>
                     <div class="title">Protocolo de Kioto</div>
                     <p>Revolucionó el derecho internacional al ser el primer acuerdo que impuso metas legalmente vinculantes para la reducción de emisiones de gases de efecto invernadero a las grandes potencias.</p>
-                    <a href="https://www.youtube.com/results?search_query=¿Qué+es+y+de+qué+trata+el+protocolo+de+Kioto" target="_blank" class="link-btn">Ver Documental</a>
+                    <a href="https://www.youtube.com/results?search_query=%C2%BFQu%C3%A9+es+y+de+qu%C3%A9+trata+el+protocolo+de+Kioto+Kimberly+Armengol" target="_blank" class="link-btn">Ver Video</a>
                 </div>
             </div>
 
-            <!-- EVENTO 12 -->
             <div class="container right">
                 <div class="content">
                     <div class="year">2000</div>
                     <div class="title">Cumbre del Milenio</div>
                     <p>Consolidó los 8 Objetivos de Desarrollo del Milenio (ODM). Logró, por primera vez, un compromiso temporal y cuantificable para reducir la pobreza y garantizar la sostenibilidad.</p>
-                    <a href="https://www.youtube.com/results?search_query=Del+Milenio+a+la+Sostenibilidad" target="_blank" class="link-btn">Ver Documental</a>
+                    <a href="https://www.youtube.com/results?search_query=Del+Milenio+a+la+Sostenibilidad" target="_blank" class="link-btn">Ver Video</a>
                 </div>
             </div>
 
-            <!-- EVENTO 13 -->
             <div class="container left">
                 <div class="content">
                     <div class="year">2001</div>
                     <div class="title">Convenio de Estocolmo</div>
                     <p>Acuerdo sanitario y ecológico clave para eliminar la producción y uso de Contaminantes Orgánicos Persistentes (COP), químicos letales que no se degradan y se acumulan en la cadena trófica.</p>
-                    <a href="https://www.youtube.com/results?search_query=convenio+de+estocolmo" target="_blank" class="link-btn">Ver Documental</a>
+                    <a href="https://www.youtube.com/results?search_query=convenio+de+estocolmo" target="_blank" class="link-btn">Ver Video</a>
                 </div>
             </div>
 
-            <!-- EVENTO 14 -->
             <div class="container right">
                 <div class="content">
                     <div class="year">2005</div>
                     <div class="title">Evaluación de los Ecosistemas del Milenio</div>
                     <p>El mayor escrutinio científico sobre la salud del planeta hasta la fecha. Advirtió contundentemente que la degradación de los ecosistemas estaba comprometiendo el bienestar humano futuro.</p>
-                    <a href="https://www.youtube.com/results?search_query=La+Evaluación+de+los+Ecosistemas+del+Milenio" target="_blank" class="link-btn">Ver Documental</a>
+                    <a href="https://www.youtube.com/results?search_query=P%C3%ADldora+de+Conocimiento+XI+La+Evaluaci%C3%B3n+de+los+Ecosistemas+del+Milenio" target="_blank" class="link-btn">Ver Video</a>
                 </div>
             </div>
 
-            <!-- EVENTO 15 -->
             <div class="container left">
                 <div class="content">
                     <div class="year">2012</div>
                     <div class="title">Conferencia Río+20</div>
                     <p>Veinte años después de la Cumbre de la Tierra, institucionalizó el modelo de la "Economía Verde" y preparó el terreno político y estratégico para redactar la futura Agenda 2030.</p>
-                    <a href="https://www.youtube.com/watch?v=1zI4w4o0mAE" target="_blank" class="link-btn">Ver Documental</a>
+                    <a href="https://www.youtube.com/watch?v=1zI4w4o0mAE" target="_blank" class="link-btn">Ver Video</a>
                 </div>
             </div>
 
-            <!-- EVENTO 16 -->
             <div class="container right">
                 <div class="content">
                     <div class="year">2015</div>
                     <div class="title">Aprobación de la Agenda 2030 (ODS)</div>
                     <p>Sustituyó a los ODM instaurando 17 Objetivos de Desarrollo Sostenible universales, obligando a los Estados a erradicar la pobreza sin destruir la base ecológica mundial.</p>
-                    <a href="https://www.youtube.com/results?search_query=Los+Objetivos+de+Desarrollo+Sostenible" target="_blank" class="link-btn">Ver Documental</a>
+                    <a href="https://www.youtube.com/results?search_query=Los+Objetivos+de+Desarrollo+Sostenible+qu%C3%A9+son+y+c%C3%B3mo+alcancarlos" target="_blank" class="link-btn">Ver Video</a>
                 </div>
             </div>
 
-            <!-- EVENTO 17 -->
             <div class="container left">
                 <div class="content">
                     <div class="year">2016</div>
                     <div class="title">Enmienda de Kigali</div>
                     <p>Acuerdo monumental dentro del Protocolo de Montreal para reducir gradualmente los hidrofluorocarbonos (HFC). Evitó un impacto drástico de calentamiento proyectado para finales de siglo.</p>
-                    <a href="https://www.youtube.com/results?search_query=Enmienda+de+Kigali+Protocolo+Montreal" target="_blank" class="link-btn">Ver Documental</a>
+                    <a href="https://www.youtube.com/results?search_query=Acuerdo+hist%C3%B3rico+para+la+eliminaci%C3%B3n+progresiva+de+los+gases+hidrofluorocarbonos" target="_blank" class="link-btn">Ver Video</a>
                 </div>
             </div>
 
-            <!-- EVENTO 18 -->
             <div class="container right">
                 <div class="content">
                     <div class="year">2022</div>
                     <div class="title">Marco de Biodiversidad Kunming-Montreal</div>
                     <p>Un pacto histórico mundial equivalente al Acuerdo de París pero para la naturaleza. Compromete al mundo a proteger el 30% de la tierra y océanos (Meta 30x30) para el año 2030.</p>
-                    <a href="https://www.youtube.com/results?search_query=Marco+Global+de+Biodiversidad+Kunming-Montreal" target="_blank" class="link-btn">Ver Documental</a>
+                    <a href="https://www.youtube.com/results?search_query=Marco+Global+de+Biodiversidad+Kunming-Montreal" target="_blank" class="link-btn">Ver Video</a>
                 </div>
             </div>
 
-            <!-- EVENTO 19 -->
             <div class="container left">
                 <div class="content">
                     <div class="year">2023</div>
                     <div class="title">Exhortación Laudate Deum</div>
                     <p>Una dura reprensión de la Iglesia Católica por el fracaso de la diplomacia global. El Papa advirtió que el mundo está "llegando a un punto de quiebre" por la falta de compromisos reales.</p>
-                    <a href="https://www.youtube.com/results?search_query=Video+Exhortación+Apostólica+Laudate+Deum" target="_blank" class="link-btn">Ver Documental</a>
+                    <a href="https://www.youtube.com/results?search_query=Video+Exhortaci%C3%B3n+Apost%C3%B3lica+Laudate+Deum" target="_blank" class="link-btn">Ver Video</a>
                 </div>
             </div>
 
-            <!-- EVENTO 20 -->
             <div class="container right">
                 <div class="content">
                     <div class="year">2024</div>
                     <div class="title">COP16 de Biodiversidad (Cali, Colombia)</div>
                     <p>Hito geopolítico sudamericano centrado en la movilización de financiamiento para la conservación, la repartición de beneficios de los recursos genéticos y el empoderamiento de comunidades locales.</p>
-                    <a href="https://www.youtube.com/results?search_query=Falta+de+acuerdo+en+financiación+para+la+naturaleza+cierre+de+la+COP16" target="_blank" class="link-btn">Ver Documental</a>
+                    <a href="https://www.youtube.com/results?search_query=Falta+de+acuerdo+en+financiaci%C3%B3n+para+la+naturaleza+deja+opiniones+mixtas+al+cierre+de+la+COP16" target="_blank" class="link-btn">Ver Video</a>
                 </div>
             </div>
 
-            <!-- EVENTO 21 -->
             <div class="container left">
                 <div class="content">
                     <div class="year">2025</div>
                     <div class="title">COP30 de Cambio Climático (Belém, Brasil)</div>
                     <p>Cumbre climática celebrada en la Amazonía. Evento crítico donde los Estados debieron presentar sus nuevas Contribuciones Determinadas a Nivel Nacional (NDC) para alinearse definitivamente al límite de 1.5°C.</p>
-                    <a href="https://www.youtube.com/results?search_query=Finaliza+la+COP30+sin+compromisos+sobre+combustibles+fósiles" target="_blank" class="link-btn">Ver Documental</a>
+                    <a href="https://www.youtube.com/results?search_query=Finaliza+la+COP30+sin+compromisos+sobre+combustibles+f%C3%B3siles" target="_blank" class="link-btn">Ver Video</a>
                 </div>
             </div>
 
         </div>
     </div>
 
+    <!-- PENSAMIENTO DE REFLEXIÓN -->
+    <div class="reflection-container">
+        <p class="reflection-text">"El desarrollo sostenible no es un lujo que podamos elegir o rechazar; es una exigencia ineludible de la supervivencia humana y la única estrategia viable para garantizar la prosperidad económica con dignidad, equidad y respeto absoluto por la casa común que habitamos."</p>
+    </div>
+
+    <!-- REFERENCIAS BIBLIOGRÁFICAS -->
     <section class="references-section">
         <h2>Referencias Bibliográficas</h2>
         
